@@ -2,6 +2,8 @@ backend:
   name: github
   repo: oneness1028-ship-it/mdesign
   branch: main
+  base_url: https://mdesign-seven.vercel.app
+  auth_endpoint: api/auth
 
 media_folder: public/images
 public_folder: /public/images
