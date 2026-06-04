@@ -46,13 +46,8 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(184,112,69,0.12);
     }
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 20px;
-      letter-spacing: 0.2em;
-      color: var(--terracotta);
-      text-decoration: none;
-    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 36px; width: auto; }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a {
       text-decoration: none;
@@ -395,7 +390,9 @@
 
   <!-- Nav -->
   <nav>
-    <a href="#hero" class="nav-logo">Mdesign</a>
+    <a href="#hero" class="nav-logo">
+      <img src="/public/logo.png" alt="Mdesign">
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -405,6 +402,7 @@
 
   <!-- Hero -->
   <section id="hero">
+    <img src="/public/logo.png" alt="Mdesign" style="height: clamp(80px, 14vw, 140px); width: auto; margin-bottom: 32px; opacity: 0.92;">
     <p class="hero-sub" id="hero-name">Mayumin∞Anne</p>
     <h1 class="hero-title">Mdesign</h1>
     <p class="hero-concept">體・意識・人生をデザインする</p>
