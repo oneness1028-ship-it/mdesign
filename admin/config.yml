@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/mdesign  # ← あとで変更
+  branch: main
+
+media_folder: public/images
+public_folder: /public/images
+
+collections:
+  - name: "site"
+    label: "サイト設定"
+    files:
+      - name: "content"
+        label: "コンテンツ編集"
+        file: "public/content.json"
+        format: json
+        fields:
+          - label: "プロフィール名"
+            name: "name"
+            widget: "string"
+            default: "Mayumin∞Anne"
+
+          - label: "肩書き"
+            name: "role"
+            widget: "string"
+            default: "ボディセラピスト・クリエイター・タントリカ"
+
+          - label: "プロフィール文"
+            name: "bio"
+            widget: "text"
+            default: "體を整え、意識を広げ、人生そのものを美しくデザインする。"
+
+          - label: "プロフィール写真"
+            name: "photo"
+            widget: "image"
+            required: false
+
+          - label: "コンタクト説明文"
+            name: "contactNote"
+            widget: "text"
+            default: "セッションのご依頼・ご相談など、お気軽にメッセージをお送りください。\n\n通常2〜3営業日以内にご返信いたします。"
+
+          - label: "サービス1：體のデザイン"
+            name: "service1"
+            widget: "object"
+            fields:
+              - { label: "説明", name: "desc", widget: "text", required: false }
+
+          - label: "サービス2：意識のデザイン"
+            name: "service2"
+            widget: "object"
+            fields:
+              - { label: "説明", name: "desc", widget: "text", required: false }
+
+          - label: "サービス3：人生のデザイン"
+            name: "service3"
+            widget: "object"
+            fields:
+              - { label: "説明", name: "desc", widget: "text", required: false }
