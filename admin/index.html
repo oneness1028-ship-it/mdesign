@@ -7,5 +7,41 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'oneness1028-ship-it/mdesign',
+          branch: 'main',
+          base_url: 'https://mdesign-seven.vercel.app',
+          auth_endpoint: 'api/auth',
+        },
+        media_folder: 'public/images',
+        public_folder: '/public/images',
+        collections: [
+          {
+            name: 'site',
+            label: 'サイト設定',
+            files: [
+              {
+                name: 'content',
+                label: 'コンテンツ編集',
+                file: 'public/content.json',
+                format: 'json',
+                fields: [
+                  { label: 'プロフィール名',  name: 'name',        widget: 'string' },
+                  { label: '肩書き',          name: 'role',        widget: 'string' },
+                  { label: 'プロフィール文',  name: 'bio',         widget: 'text'   },
+                  { label: 'プロフィール写真', name: 'photo',       widget: 'image', required: false },
+                  { label: 'コンタクト説明文', name: 'contactNote', widget: 'text'   },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    })
+  </script>
 </body>
 </html>
